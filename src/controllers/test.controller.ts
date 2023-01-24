@@ -1,11 +1,11 @@
-import { RequestHandler } from 'express';
+import { RequestHandler } from "express";
 
-export const test:RequestHandler = (req, res, next) => {
+export const test: RequestHandler = (req, res, next) => {
   res.json({
-    status : "OK"
-  })
+    status: "OK",
+  });
 };
 
 module.exports = {
-  test
-}
+  test,
+};
