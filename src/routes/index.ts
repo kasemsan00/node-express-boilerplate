@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 
-const testController = require("../controllers/test.controller");
+import testController = require("../controllers/test.controller");
 
 router.get("/", (req, res) => {
   res.send({
@@ -11,4 +11,4 @@ router.get("/", (req, res) => {
 
 router.get("/test", testController.test);
 
-module.exports = router;
+export default router;

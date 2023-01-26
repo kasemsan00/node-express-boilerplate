@@ -1,11 +1,12 @@
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import morgan from "morgan";
-const cors = require("cors");
+import cors = require("cors");
+import logger from "./config/logger";
+import indexRouter from "./routes/index";
 const app = express();
-const logger = require("./config/logger");
 
-const indexRouter = require("./routes/index");
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
