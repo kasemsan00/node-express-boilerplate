@@ -36,7 +36,9 @@ const server = new ApolloServer({
       context: async ({ req }) => ({ token: req.headers.token }),
     }),
   );
-  httpServer.listen({ port: 4000 }, () => {
-    logger.info(`🚀 Server ready at http://localhost:4000/`);
+
+  const port = process.env.PORT || 4000;
+  httpServer.listen({ port }, () => {
+    logger.info(`🚀 Server ready at http://localhost:${port}/`);
   });
 })();

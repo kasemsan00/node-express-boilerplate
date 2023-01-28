@@ -5,4 +5,4 @@ services:
     container_name: node-express-boilerplate
     restart: always
     ports:
-      - "5500:5500"
+      - "5800:5800"
